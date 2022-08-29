@@ -1,11 +1,13 @@
-import { Paper } from '@mui/material';
+import { Grid, Paper } from '@mui/material';
 import React from 'react'
 
 function TourCard() {
   return (
-    <div>
-        <Paper elevation={3} variant='outlined'>Hello</Paper>
-    </div>
+    <Grid item xs={3}>
+        <Paper elevation={3}>
+            Hello
+        </Paper>
+    </Grid>
   )
 }
 
