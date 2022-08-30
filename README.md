@@ -7,4 +7,5 @@
 5- We as well use a data display category of mui which is the compoenent TYPOGRAPHY  (to write text) 
 6- we also installed mui-icons, to get access to the AccessTime icons;
 7- we also use the input category of mui, to display rating (appear as stars), we use the RATING component of mui.
-8-
+8- With the theme providers, we can customize our own styles;
+9- we use the createTheme to customize our styles, then import the themeProvider from mui. Wrap the component we want to customize inside this themeProvider and pass the createTheme as a prop in.
