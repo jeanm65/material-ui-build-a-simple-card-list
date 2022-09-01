@@ -9,3 +9,4 @@
 7- we also use the input category of mui, to display rating (appear as stars), we use the RATING component of mui.
 8- With the theme providers, we can customize our own styles;
 9- we use the createTheme to customize our styles, then import the themeProvider from mui. Wrap the component we want to customize inside this themeProvider and pass the createTheme as a prop in.
+10-we use the App bar component of the surface category of mui, we just copy the code source in mui. After, we use the data.json from the git repository

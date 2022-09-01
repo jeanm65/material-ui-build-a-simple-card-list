@@ -37,15 +37,15 @@ const theme = createTheme({
 
 // to apply these style, we should use the themeProvider of mui, and wrap all component in what we want to apply the customed style.
 
-function TourCard() {
+function TourCard({tour}) {
   return (
     <Grid item xs={3}>
       <ThemeProvider theme={theme}>
         <Paper elevation={3}>
-           <img src='https://media.istockphoto.com/photos/beautiful-landscape-with-waterfall-in-northern-forest-on-summer-of-picture-id1366230496?b=1&k=20&m=1366230496&s=170667a&w=0&h=GySyxgFUa2Elmgq6xsg-bIACQ3fEDGnRZIgXRV16dJk=' alt='' className='img'/>
+           <img src={tour.image} alt='' className='img'/>
            <Box paddingX={1}>
                 <Typography variant='subtitle1 ' component='h5' marginBottom={1}>
-                    Immerse into the falls
+                    {tour.name}
                 </Typography>
                 <Box
            sx={{
@@ -54,7 +54,7 @@ function TourCard() {
            }}>
                 <AccessTime sx={{ width: 12.5 }} />
                 <Typography variant='body2' component='p' marginLeft={0.5}>
-                    5hours
+                    {tour.duration}hours
                 </Typography>
                 </Box>
                 <Box 
@@ -64,16 +64,16 @@ function TourCard() {
                  }}
                  marginTop={3}>
                      <Rating name="read-only" value={4.5} precision={0.5} size="small" readOnly />
-                        <Typography variant='body2' component='p' marginLeft={0.5}>
-                            4.5
+                        <Typography variant='body2' component='h4' marginLeft={0.5}>
+                            {tour.rating}
                         </Typography>
-                        <Typography variant='body3' component='p' marginLeft={0.5} marginTop={0}>
-                            (655 reviews)
+                        <Typography variant='body3' component='h4' marginLeft={0.5} marginBottom={0}>
+                            ({tour.numberOfReviews} reviews)
                         </Typography>     
                  </Box>
                  <Box>
                     <Typography variant="h6" component="h3" marginTop={0}>
-                        From C $450
+                        From C {tour.price}
                     </Typography>
                  </Box>
                  <Box>
